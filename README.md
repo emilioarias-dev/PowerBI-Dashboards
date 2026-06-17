@@ -1,140 +1,119 @@
-# 📊 Business Intelligence Dashboard: E-Commerce & Operations Analysis
+# 📊 Global Superstore: Profit & Margin Analysis Dashboard
 
-An end-to-end Business Intelligence project focused on transforming raw transactional data into actionable strategic insights using Power BI. 
+An end-to-end Business Intelligence project developed in Power BI to analyze and optimize the financial health, profits, and margins of the **Global Superstore** commercial dataset across multiple international regions.
 
-The project focuses on building a scalable data model, establishing robust DAX metrics, and designing an intuitive user interface to optimize corporate decision-making. Special attention is given to **operational efficiency**, **revenue trends**, and **customer behavior analysis** for stakeholder reporting.
+This interactive dashboard transforms transactional logs into strategic insights, focusing heavily on **profitability tracking**, **cost structure analysis**, and **geographical margin leaks**.
 
 ---
 
 ## 📋 Project Overview
 
-In today's data-driven market, tracking key performance indicators (KPIs) in real-time is crucial for maintaining a competitive edge. This project delivers an interactive dashboard capable of breaking down complex operational metrics into clear, visual stories.
+In global retail operations, high sales volume does not automatically translate to healthy business performance. This project delivers a high-density executive dashboard designed to monitor and evaluate corporate margins from **2015 to 2018**.
 
-Rather than just displaying raw figures, the dashboard prioritizes **data storytelling**, allowing managers to track underperforming areas, identify seasonal sales patterns, and optimize inventory or logistics.
+The dashboard allows senior leadership to identify underperforming territories (where revenue is high but net profits are negative), track performance trends over time, and segment financial metrics by product categories and geographical regions.
 
 ---
 
 ## 🎯 Objectives
 
-* Build a complete, star-schema data model within Power BI.
-* Clean and transform messy source data using Power Query (M formula language).
-* Develop advanced business metrics using DAX (Data Analysis Expressions).
-* Design high-fidelity, interactive visualizations tailored for stakeholders.
-* Simulate real-world business scenarios to drive strategic decision-making.
+* Extract and clean transactional data from the Superstore retail database.
+* Establish a robust data structure optimized for quick rendering and financial analytics.
+* Develop custom dynamic business metrics using DAX (Data Analysis Expressions).
+* Design an executive-level interactive UI/UX layout featuring corporate visual storytelling.
+* Isolate and diagnose regional operational bottlenecks causing margin losses.
 
 ---
 
-## 📊 Dataset & Data Model
+## 📊 Dataset & Data Structure
 
-**Enterprise Operations & Sales Dataset**
+**Superstore Commercial Dataset**
 
-* **Data Sources:** Relational tables spanning sales, logistics, and customer data.
-* **Architecture:** Star Schema optimization (Fact and Dimension tables) to ensure high performance and fast visual rendering.
-* **Data Cleansing:** Executed through Power Query, including data type casting, handling missing values, and custom column creation.
+* **Data Scope:** International retail orders encompassing product taxonomy, logistics timestamps, and regional hierarchies.
+* **Core Table (`Compras`):** A consolidated data view tracking key transactional metrics including quantities, discounts, and regional distribution fields (Country, City, State, and Macro-region).
 
 ---
 
 ## ⚙️ Business Intelligence Pipeline
 
-The project follows a rigorous, industry-standard BI workflow:
+The project follows a standard professional BI development lifecycle:
 
-1. Requirements gathering and KPI definition
-2. Data extraction and Power Query ETL ingestion
-3. Schema design and relationship mapping (1:N validation)
-4. Creation of dedicated DAX measures folders
-5. Time-Intelligence calculations setup (YTD, MoM, YoY)
-6. Visual hierarchy layout design
-7. Implementing interactive filtering (Slicers, Tooltips, Drill-downs)
-8. UI/UX design polish (Color theory and spacing alignment)
-9. Dashboard performance profiling
-10. Insights extraction and executive summary drafting
+1. Ingestion of raw Superstore multi-regional datasets.
+2. Data normalization and formatting via Power Query (handling geographical tags and numeric casting).
+3. Modeling of the main transactional entities inside the **`Compras`** data view.
+4. Deployment of formal DAX measures to avoid implicit calculation overhead.
+5. Setup of interactive multi-level filtering (Global Time Slicers, Category, and Sub-category drill-downs).
+6. UI/UX design: Implementation of a clean, structured matrix framework utilizing conditional color formatting (Red/Green indicators) for rapid risk identification.
 
 ---
 
-## 🖥️ Dashboard Views & Features
+## 🖥️ Dashboard Features & Views
 
-The Power BI report is divided into strategic views to serve different corporate levels:
+As captured in the analytical interface (`image_a6157f.jpg`), the main view comprises several specialized visual blocks:
 
-* **Executive Summary:** High-level KPIs (Total Revenue, Profit Margins, Order Volume).
-* **Operational Analysis:** Logistics tracking, delivery performance, and fulfillment times.
-* **Commercial Insights:** Customer segmentation, top-performing products, and regional sales distribution.
+* **Executive High-Level KPIs:** Standalone cards highlighting total consolidated profit (**2.20 Million**) and the global net margin benchmark (**10.21%**).
+* **Geographical Performance Matrix:** A conditional table breaking down total profits and net margins by country/region, immediately surfacing critical margin-loss areas (e.g., negative performance alerts in Venezuela and Panama).
+* **Temporal Distributions:** Multi-layered bar and line charts evaluating profit variations on an annual scale from 2015 up to 2018.
+* **Regional Market Share:** A percentage breakdown displaying profit distribution across key sectors: *Norte*, *Centro*, *Caribe*, and *Sur*.
+* **Geographic Spatial Mapping:** An integrated global scatter map providing contextual, visual data density regarding global profit nodes.
 
 ---
 
-## 🛠️ Data Engineering & DAX
+## 🛠️ Advanced Analytics & DAX Measures
 
-Advanced analytical calculations were built to unlock deeper insights.
+To maintain structural organization and analytical flexibility, specific metrics were explicitly engineered using **DAX (Data Analysis Expressions)** within the dataset:
 
-### Calculated Measures (DAX)
-Key metrics include:
-* Dynamic time-intelligence comparisons (`DATEADD`, `SAMEPERIODLASTYEAR`).
-* Cumulative financial metrics (`TOTALYTD`).
-* Advanced filtering and context modification using `CALCULATE`.
-
-*Note: All measures were structured inside dedicated measure tables to maintain an organized and scalable model.*
+### Key Calculated Measures
+* **`Ganancias`** *(Total Net Profit calculation across historical orders)*
+* **`Margen`** *(Dynamic margin percentage calculation modifying filter contexts)*
+* **`Total de costos`** *(Aggregation of product acquisition and logistics costs)*
+* **`Total de ventas`** *(Gross revenue baseline tracking)*
 
 ---
 
 ## 📈 Evaluation Metrics
 
-The dashboard evaluates business health across three main pillars:
+The operational health of the Superstore is continuously audited through three main dimensions:
 
-* **Financial Health:** Revenue growth, net margin tracking, and average order value (AOV).
-* **Operational Performance:** Shipping delays, order fulfillment rates, and regional bottlenecks.
-* **Customer Retention:** Purchase frequency, geographic density, and category preferences.
-
----
-
-## 🔍 Data Storytelling & Interactivity
-
-To bridge the gap between data analytics and executive action, the dashboard includes:
-
-* **Dynamic Tooltips** that display granular charts when hovering over high-level visuals.
-* **Drill-down hierarchies** allowing users to travel from macro country data down to specific product SKUs.
-* **Cross-filtering** capabilities for intuitive, frictionless data exploration.
+* **Profit Density:** Evaluating gross revenue vs. net earnings to prevent empty growth.
+* **Regional Risk Mitigation:** Using conditional thresholds to flag territories where operating costs exceed commercial yields.
+* **Category Affinity:** Segmenting high-margin vs. high-volume product families to adjust inventory strategies.
 
 ---
 
-## 💼 Business Scenario Simulation
+## 💼 Corporate Scenario Simulation
 
-The project evaluates how the dashboard satisfies different corporate requirements:
+The analytical structure of this dashboard effectively solves operational challenges for different business units:
 
-### 🎯 Sales & Marketing Team
-* **Requirements:** High-level campaign tracking, regional performance, product affinity.
-* **Context:** Focusing on maximizing revenue and targeting high-value customer segments.
+### 👔 Chief Financial Officer (CFO)
+* **Application:** Monitors the top-line metrics (**2.20M Profit / 10.21% Margin**) to evaluate the macro fiscal trajectory of the enterprise.
 
-### 📦 Supply Chain & Logistics
-* **Requirements:** Delivery times, order backlogs, shipping carrier efficiency.
-* **Context:** Aiming to reduce operational costs and improve customer satisfaction.
+### 🗺️ Regional Sales Managers
+* **Application:** Use the regional line trends and pie distribution matrix to compare the efficiency of different logistics centers (e.g., benchmarking *Caribe* against *Sur* markets).
 
-### 👔 Executive Board
-* **Requirements:** Macro KPIs, profit margins, Year-over-Year growth rates.
-* **Context:** Requiring high-density summaries for quick strategic pivots.
+### 🔍 Risk & Audit Compliance Team
+* **Application:** Leverage the conditional red-highlighted matrix views to instantly target severe target leaks in specific nations before executing localized budget adjustments.
 
 ---
 
-## 🚀 Key Results
+## 🚀 Key Insights & Project Results
 
-* Developed a fully responsive, corporate-grade dashboard.
-* Replaced manual data aggregation with automated Power BI refresh logic.
-* Identified key geographical regions driving over 60% of total revenue.
-* Discovered specific operational bottlenecks causing delivery delays during peak seasons.
-* Proved that proper UI/UX design in BI directly speeds up executive decision-making times.
+* **Consolidated Baseline:** Successfully mapped and computed a global operational matrix yielding **$2.20M in profits** with a global efficiency baseline of **10.21%**.
+* **Loss Isolation:** Identified major commercial leaks in specific countries like Venezuela and Panama, where margin profiles dropped significantly into negative percentages despite generating active sales transactions.
+* **Automation Leap:** Replaced manual reporting structures with fully scalable, cross-filtered visualizations that dynamically update based on localized product hierarchies.
 
 ---
 
 ## 💻 Technologies Used
 
-* **Power BI Desktop** (Data Modeling & Visualization)
-* **Power Query / M Language** (Extract, Transform, Load)
-* **DAX** (Advanced Analytics)
-* **SQL / Excel** (Data Sources)
+* **Power BI Desktop** (Data Exploration, Modeling & Interactive Visualizations)
+* **Power Query / M Language** (Data Extraction and ETL Pipelines)
+* **DAX** (Custom Financial Measures & Logical Scripts)
 
 ---
 
 ## 📁 Repository Structure
 
 ```text
-├── Proyecto avance #3.pbix       # Core Power BI File (Data Model & Dashboard)
-├── README.md                     # Project documentation
-└── documentation/               # Data dictionary and metric formulas
+├── Proyecto avance #3.pbix       # Core Power BI File (Data Model & Finished Dashboard)
+├── README.md                     # Comprehensive project documentation
+└── image_a6157f.jpg              # Dashboard layout reference view
